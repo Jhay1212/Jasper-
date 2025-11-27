@@ -13,19 +13,9 @@ class Home extends StatelessWidget {
           HeroWidget(),
           Card(
             child: Container(
-              padding: const EdgeInsets.symmetric(vertical: 10),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text("Six Seven", style: TextStyle(
-                    color: Colors.greenAccent,
-                    fontSize: 12,
-                    fontWeight: FontWeight.bold
-                  ),)
-
-                ],
-              ),
-            ),
+              width: 60,
+              child: Text("ASASS"),
+            )
           ),
         ],
       ),
