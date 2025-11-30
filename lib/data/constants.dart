@@ -5,13 +5,13 @@ class KConstants {
 }
 class KTextStyle { 
   static const TextStyle primaryText = TextStyle(
-    color: Colors.white,
-    fontWeight: FontWeight.w600,
-    fontSize: 16,
+    color: Colors.greenAccent,
+    fontWeight: FontWeight.w900,
+    fontSize: 18,
   );
   static const TextStyle secondaryText = TextStyle(
-    color: Colors.white12,
-    fontSize: 14
+    color: Colors.cyan,
+    fontSize: 12
   );
 
   static const TextStyle titleText = TextStyle(
@@ -19,4 +19,5 @@ class KTextStyle {
     letterSpacing: 2,
     fontWeight: FontWeight.w900
   );
+
 }

@@ -20,16 +20,24 @@ class _ProfileState extends State<Profile> {
       padding: const EdgeInsets.all(8.0),
       child: Column(
         children: [
+          CircleAvatar(
+            radius: 50,
+            backgroundImage: AssetImage("assets/images/alucard.png"),
+          ),
           ListTile(
             title: Text("Logout"),
             onTap: () {
               selectedPageNotifier.value = 0;
-              Navigator.pushReplacement(context,
-              MaterialPageRoute(builder: (context) {
-                return Welcome();
-              }));
-            }
-          )
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return Welcome();
+                  },
+                ),
+              );
+            },
+          ),
         ],
       ),
     );

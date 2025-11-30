@@ -24,7 +24,7 @@ class WidgetTree extends StatelessWidget {
         appBar: AppBar(
         
           title: Text("First App"),
-          backgroundColor: Colors.green,
+          backgroundColor: const Color.fromARGB(255, 54, 103, 250),
           centerTitle: true,
           leading: Builder(
             builder: (context) {

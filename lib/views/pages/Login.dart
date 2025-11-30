@@ -38,7 +38,7 @@ class _LoginState extends State<Login> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Container(
+            SizedBox(
               width: double.infinity,
               height: 100,
               child: Lottie.asset("assets/lotties/Login.json"),
@@ -81,7 +81,7 @@ class _LoginState extends State<Login> {
                 onLoginPress(context, passwordController.text);
               },
               child: FittedBox(
-                child: Text("Login", style: KTextStyle.primaryText),
+                child: Text("Login", style: KTextStyle.secondaryText),
               ),
             ),
           ],
