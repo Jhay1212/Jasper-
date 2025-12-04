@@ -22,7 +22,7 @@ class _NavbarState extends State<Navbar> {
         selectedIndex: selectedPage,
         onDestinationSelected: (int val) => {
           setState(() {
-          print("index ${val}");
+          print("index $val");
             selectedPageNotifier.value = val;
           })
         });

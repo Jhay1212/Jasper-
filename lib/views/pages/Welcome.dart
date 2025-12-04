@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/data/constants.dart';
-import 'package:flutter_application_1/views/pages/Homepage.dart';
 import 'package:flutter_application_1/views/pages/Login.dart';
 import 'package:flutter_application_1/views/pages/Onboarding.dart';
-import 'package:flutter_application_1/views/widget_tree.dart';
-import 'package:flutter_application_1/widgets/HeroWidget.dart';
 import 'package:lottie/lottie.dart';
 
 class Welcome extends StatelessWidget {
@@ -17,7 +14,7 @@ class Welcome extends StatelessWidget {
         child: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.all(20.0),
-        
+
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -26,11 +23,9 @@ class Welcome extends StatelessWidget {
                 FittedBox(
                   child: Text("Flutter App l", style: KTextStyle.titleText),
                 ),
-                 SizedBox(
-                  height: 20,
-                ),
+                SizedBox(height: 20),
 
-                Container(
+                SizedBox(
                   width: double.infinity,
                   child: FilledButton(
                     style: FilledButton.styleFrom(
@@ -48,13 +43,10 @@ class Welcome extends StatelessWidget {
                       );
                     },
                     child: Text("Get Started"),
-                    
                   ),
-                ), 
-                SizedBox(
-                  height: 8,
                 ),
-                Container(
+                SizedBox(height: 8),
+                SizedBox(
                   width: double.infinity,
                   child: FilledButton(
                     style: FilledButton.styleFrom(

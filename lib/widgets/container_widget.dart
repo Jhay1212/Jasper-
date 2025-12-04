@@ -19,11 +19,11 @@ class ContainerWidget extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
             Text(
-              this.title,
+              title,
               style: KTextStyle.primaryText,
             ),
             Text(
-              this.description,
+              description,
               style: KTextStyle.secondaryText,
             )
           ]),

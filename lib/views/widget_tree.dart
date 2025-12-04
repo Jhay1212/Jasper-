@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/data/constants.dart';
 import 'package:flutter_application_1/data/notifiers.dart';
+import 'package:flutter_application_1/views/pages/Courses.dart';
 import 'package:flutter_application_1/views/pages/Homepage.dart';
 import 'package:flutter_application_1/views/pages/Profile.dart';
 import 'package:flutter_application_1/views/pages/Settings.dart';
@@ -10,6 +11,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 List<Widget> pages = [
   Home(),
   Profile(),
+  Courses()
 ];
 
 class WidgetTree extends StatelessWidget {

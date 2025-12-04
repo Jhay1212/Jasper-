@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/views/pages/Expandable.dart';
 
 class Settings extends StatefulWidget {
   const Settings({super.key, required this.title, required this.username});
@@ -38,20 +39,19 @@ class _SettingsState extends State<Settings> {
               child: Text("Click Me"),
             ),
 
-          Divider(
-            color: Colors.greenAccent
-          ),
+            Divider(color: Colors.greenAccent),
             ElevatedButton(
               onPressed: () {
-                showDialog(context: context, builder: (context) {
-                  return AlertDialog(
-                    title: Text("Alert!!!"),
-                    content: Text('kiss me!! '),
-                    actions: [
-                      CloseButton()
-                    ],
-                  );
-                });
+                showDialog(
+                  context: context,
+                  builder: (context) {
+                    return AlertDialog(
+                      title: Text("Alert!!!"),
+                      content: Text('kiss me!! '),
+                      actions: [CloseButton()],
+                    );
+                  },
+                );
               },
               child: Text("Click Me"),
             ),
@@ -59,9 +59,9 @@ class _SettingsState extends State<Settings> {
             DropdownButton(
               value: menuItem,
               items: [
-                DropdownMenuItem(child: Text('Item 1'), value: 'e1'),
-                DropdownMenuItem(child: Text('Item 2'), value: 'e2'),
-                DropdownMenuItem(child: Text('Item 1'), value: 'e3'),
+                DropdownMenuItem(value: 'e1', child: Text('Item 1')),
+                DropdownMenuItem(value: 'e2', child: Text('Item 2')),
+                DropdownMenuItem(value: 'e3', child: Text('Item 1')),
               ],
 
               onChanged: (String? value) {
@@ -75,12 +75,21 @@ class _SettingsState extends State<Settings> {
               child: Container(width: 300, height: 200, color: Colors.grey),
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return Expandable();
+                    },
+                  ),
+                );
+              },
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.tealAccent,
                 foregroundColor: Colors.white,
               ),
-              child: Text("Click me"),
+              child: Text("Expandable Page"),
             ),
           ],
         ),

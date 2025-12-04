@@ -30,61 +30,73 @@ class _LoginState extends State<Login> {
 
   @override
   Widget build(BuildContext context) {
+    double widthScreen = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(),
       body: Padding(
         padding: const EdgeInsets.all(12.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            SizedBox(
-              width: double.infinity,
-              height: 100,
-              child: Lottie.asset("assets/lotties/Login.json"),
-            ),
-            SizedBox(height: 50),
-            TextField(
-              controller: usernameController,
-              decoration: InputDecoration(
-                hintText: "Username",
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(12),
+        child: LayoutBuilder(
+          builder: (context, BoxConstraints contraints) {
+            return FractionallySizedBox(
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    SizedBox(
+                      width: double.infinity,
+                      height: 100,
+                      child: Lottie.asset("assets/lotties/Login.json"),
+                    ),
+                    SizedBox(height: 50),
+                    TextField(
+                      controller: usernameController,
+                      decoration: InputDecoration(
+                        hintText: "Username",
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                      ),
+                      onEditingComplete: () {
+                        setState(() {
+                          print('asda');
+                        });
+                      },
+                    ),
+                    SizedBox(height: 15),
+                    TextField(
+                      controller: passwordController,
+                      decoration: InputDecoration(
+                        hintText: "Password",
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                      ),
+                      onEditingComplete: () {
+                        setState(() {
+                          print('asda');
+                        });
+                      },
+                    ),
+                
+                    SizedBox(height: 20,),
+                    SizedBox(
+                      width: double.infinity,
+                      child: FilledButton(
+                        onPressed: () {
+                          onLoginPress(context, passwordController.text);
+                        },
+                        child: FittedBox(
+                          child: Text("Login", style: KTextStyle.secondaryText),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
-              onEditingComplete: () {
-                setState(() {
-                  print('asda');
-                });
-              },
-            ),
-            SizedBox(height: 15),
-            TextField(
-              controller: passwordController,
-              decoration: InputDecoration(
-                hintText: "Password",
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(12),
-                ),
-              ),
-              onEditingComplete: () {
-                setState(() {
-                  print('asda');
-                })
-
-                ;
-              },
-            ),
-
-            FilledButton(
-              onPressed: () {
-                onLoginPress(context, passwordController.text);
-              },
-              child: FittedBox(
-                child: Text("Login", style: KTextStyle.secondaryText),
-              ),
-            ),
-          ],
+            );
+          },
         ),
       ),
     );
@@ -100,7 +112,7 @@ void onLoginPress(BuildContext context, String password) {
           return WidgetTree();
         },
       ),
-      (route) => false
+      (route) => false,
     );
   }
 }

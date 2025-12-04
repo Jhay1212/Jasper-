@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/data/constants.dart';
 import 'package:flutter_application_1/data/notifiers.dart';
 import 'package:flutter_application_1/views/pages/Welcome.dart';
-import 'package:flutter_application_1/views/widget_tree.dart';
-import 'package:flutter_application_1/widgets/navbar.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
